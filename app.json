@@ -11,5 +11,8 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "i-button": "./framework/iview/button/index"
   }
 }
