@@ -1,1 +1,11 @@
 /* pages/common/register/index.wxss */
+
+page{
+  background-color: rgb(250, 250, 250);
+}
+
+.yz{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/common/login/index",
+    "pages/common/register/index",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/common/register/index",
-    "pages/common/login/index",
     "pages/functions/boss/index"
   ],
   "window": {
@@ -13,6 +13,8 @@
     "navigationBarTextStyle": "black"
   },
   "usingComponents": {
-    "i-button": "./framework/iview/button/index"
+    "i-button": "./framework/iview/button/index",
+    "i-input": "./framework/iview/input/index",
+    "i-panel": "./framework/iview/panel/index"
   }
 }
