@@ -15,6 +15,11 @@ Page({
       url: '../logs/logs'
     })
   },
+  goPage: function(url){
+    wx.navigateTo({
+      url: url
+    })
+  },
   handleClick: function() {
     wx.navigateTo({
       url: '../common/login/index',

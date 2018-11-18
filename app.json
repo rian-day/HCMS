@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/functions/bills/bill_list/index",
     "pages/common/login/index",
     "pages/common/register/index",
-    "pages/index/index",
+
     "pages/logs/logs",
     "pages/functions/boss/index"
     
@@ -23,6 +24,10 @@
     "i-panel": "./framework/iview/panel/index",
     "i-sticky": "./framework/iview/sticky/index",
     "i-sticky-item": "./framework/iview/sticky-item/index",
-    "i-input": "./framework/iview/input/index"
+    "i-input": "./framework/iview/input/index",
+    "i-grid": "./framework/iview/grid/index",
+    "i-grid-item": "./framework/iview/grid-item/index",
+    "i-grid-icon": "./framework/iview/grid-icon/index",
+    "i-grid-label": "./framework/iview/grid-label/index"
   }
 }

@@ -12,17 +12,30 @@
   </view>
 
   </view>
-  <view>
-    <view class="flex-wrp" style="flex-direction:row;">
-      <view class="flex-item ">1</view>
-      <view class="flex-item ">2</view>
-    </view>
+  <i-grid>
+  <navigator url="/pages/functions/bills/bill_list/index">
+     <i-grid-item>
+        <i-grid-icon>
+            <i-icon type='activity' size='30' />
+        </i-grid-icon>
+        <i-grid-label>账单页面</i-grid-label>
+    </i-grid-item>
+  </navigator>
 
-    
-    <view class="flex-wrp" style="flex-direction:row;">
-      <view class="flex-item "><i-icon type="activity" size="28" color="#80848f" /></view>
-      <view class="flex-item ">2</view>
-    </view>
-  </view>
-  <i-button type="primary" bind:click="handleClick">这是一个按钮</i-button>
+ 
+    <i-grid-item>
+
+        <i-grid-icon>
+            <i-icon type='activity' size='30'/>
+        </i-grid-icon>
+        <i-grid-label>Grid</i-grid-label>
+    </i-grid-item>
+    <i-grid-item>
+
+        <i-grid-icon>
+            <i-icon type='activity' size='30'/>
+        </i-grid-icon>
+        <i-grid-label>Grid</i-grid-label>
+    </i-grid-item>
+</i-grid>
   
