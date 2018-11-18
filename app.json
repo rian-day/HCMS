@@ -2,8 +2,8 @@
   "pages": [
     "pages/common/login/index",
     "pages/common/register/index",
-    "pages/index/index2/index",
-    "pages/index/index1/index",
+    "pages/index/index",
+    "pages/index2/index",
     "pages/functions/bills/bill_list/index",
     
 
