@@ -4,10 +4,9 @@
     "pages/functions/bills/bill_list/index",
     "pages/common/login/index",
     "pages/common/register/index",
-
     "pages/logs/logs",
-    "pages/functions/boss/index"
-    
+    "pages/functions/boss/index",
+    "pages/functions/vip/vip_list/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,6 +27,9 @@
     "i-grid": "./framework/iview/grid/index",
     "i-grid-item": "./framework/iview/grid-item/index",
     "i-grid-icon": "./framework/iview/grid-icon/index",
-    "i-grid-label": "./framework/iview/grid-label/index"
+    "i-grid-label": "./framework/iview/grid-label/index",
+    "i-avatar": "./framework/iview/avatar/index",
+    "i-tabs": "./framework/iview/tabs/index",
+    "i-tab": "./framework/iview/tab/index"
   }
 }

@@ -23,15 +23,15 @@
   </navigator>
 
  
+  <navigator url="/pages/functions/vip/vip_list/index">
     <i-grid-item>
-
         <i-grid-icon>
-            <i-icon type='activity' size='30'/>
+            <i-icon type="mine_fill" size='30' />
         </i-grid-icon>
-        <i-grid-label>Grid</i-grid-label>
+        <i-grid-label>vip管理</i-grid-label>
     </i-grid-item>
+  </navigator>
     <i-grid-item>
-
         <i-grid-icon>
             <i-icon type='activity' size='30'/>
         </i-grid-icon>

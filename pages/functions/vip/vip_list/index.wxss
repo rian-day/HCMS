@@ -1,0 +1,15 @@
+/* pages/functions/vip/vip_list/index.wxss */
+.operateFont{
+  display:inline-block;
+  color:#fff;
+  font-size: 20px;
+  font-weight: 700;
+  height: 100%;
+  text-align: center;
+  line-height: 70px;
+  width: 100%;
+}
+.i-swipeout-demo-button-group{
+  height: 100%;
+  width: 100%;
+}

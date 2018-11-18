@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-action-sheet": "/framework/iview/action-sheet/index",
+    "i-swipeout": "/framework/iview/swipeout/index"
+  }
+}
