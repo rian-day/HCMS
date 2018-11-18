@@ -2,9 +2,14 @@
   "pages": [
     "pages/common/login/index",
     "pages/common/register/index",
-    "pages/index/index",
+    "pages/index/index2/index",
+    "pages/index/index1/index",
+    "pages/functions/bills/bill_list/index",
+    
+
     "pages/logs/logs",
     "pages/functions/boss/index"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -14,7 +19,17 @@
   },
   "usingComponents": {
     "i-button": "./framework/iview/button/index",
+    "i-panel": "./framework/iview/panel/index",
+    "i-icon": "./framework/iview/icon/index",
+    "i-cell-group": "./framework/iview/cell-group/index",
+    "i-cell": "./framework/iview/cell/index",
+    "i-card": "./framework/iview/card/index",
+    "i-sticky": "./framework/iview/sticky/index",
+    "i-sticky-item": "./framework/iview/sticky-item/index",
     "i-input": "./framework/iview/input/index",
-    "i-panel": "./framework/iview/panel/index"
+    "i-grid": "./framework/iview/grid/index",
+    "i-grid-item": "./framework/iview/grid-item/index",
+    "i-grid-icon": "./framework/iview/grid-icon/index",
+    "i-grid-label": "./framework/iview/grid-label/index"
   }
 }

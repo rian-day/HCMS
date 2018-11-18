@@ -1,8 +1,8 @@
 <!--pages/common/register/index.wxml-->
 <view class="container login" >
   <i-panel title="">
-    <i-input value="{{ value4 }}" title="手机号" placeholder="请输入手机号" />
-    <i-input value="{{ value1 }}" title="账号" autofocus placeholder="请输入的账号" />
+    <i-input value="{{ value4 }}" title="手机号" autofocus placeholder="请输入手机号" />
+    <i-input value="{{ value1 }}" title="账号"  placeholder="请输入的账号" />
     <i-input value="{{ value2 }}" title="密码" placeholder="请输入密码" />
     <i-input value="{{ value3 }}" title="确认密码" placeholder="请再次输入密码" />
     
