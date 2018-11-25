@@ -1,12 +1,13 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/functions/bills/bill_list/index",
     "pages/common/login/index",
     "pages/common/register/index",
+    "pages/index/index",
+    "pages/functions/bills/bill_list/index",
     "pages/logs/logs",
     "pages/functions/boss/index",
-    "pages/functions/vip/vip_list/index"
+    "pages/functions/vip/vip_list/index",
+    "pages/index2/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,11 +17,11 @@
   },
   "usingComponents": {
     "i-button": "./framework/iview/button/index",
+    "i-panel": "./framework/iview/panel/index",
     "i-icon": "./framework/iview/icon/index",
     "i-cell-group": "./framework/iview/cell-group/index",
     "i-cell": "./framework/iview/cell/index",
     "i-card": "./framework/iview/card/index",
-    "i-panel": "./framework/iview/panel/index",
     "i-sticky": "./framework/iview/sticky/index",
     "i-sticky-item": "./framework/iview/sticky-item/index",
     "i-input": "./framework/iview/input/index",
