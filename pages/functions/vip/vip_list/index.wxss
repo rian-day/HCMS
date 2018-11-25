@@ -12,4 +12,7 @@
 .i-swipeout-demo-button-group{
   height: 100%;
   width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;    
 }
