@@ -8,6 +8,7 @@
     "pages/functions/boss/index",
     "pages/functions/vip/vip_list/index",
     "pages/index2/index"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
