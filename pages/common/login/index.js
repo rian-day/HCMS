@@ -23,22 +23,20 @@ Page({
 
   handleClick: function () {
     console.log("账号：" + this.data.userid+" | 密码："+this.data.password);
-    wx.navigateTo({
-      url: '../../index2/index'
-    })
     wx.request({
-      url: 'test.php', //仅为示例，并非真实的接口地址
+      url: 'http://115.159.181.30:8181/user/login', //仅为示例，并非真实的接口地址
       data: {
         userid: this.data.userid,
-        y: this.data.password
+        password: this.data.password
       },
+      method: 'POST', 
       header: {
-        'content-type': 'application/json' // 默认值
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
       success(res) {
         console.log(res.data)
 
-        if(userType == 1){
+        if(userType == 1){sdafasf
           wx.navigateTo({
             url: '../../index/index1/index'
           })

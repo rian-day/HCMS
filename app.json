@@ -1,13 +1,25 @@
 {
   "pages": [
-    "pages/common/login/index",
+    "pages/index2/index",
+
+    "pages/manage/turnover/index",
+    "pages/manage/clerk/index",
+    "pages/manage/discount/vip/index",
+    "pages/manage/discount/activity/index",
+    "pages/manage/bill/bill_list/index",
+    "pages/manage/bill/bill_inf/index",
+    "pages/manage/service/service_add/index",
+    "pages/manage/service/service_list/index",
+    "pages/manage/club/club_add/index",
+    "pages/manage/club/club_inf/index",
+    
     "pages/common/register/index",
+    "pages/common/login/index",
     "pages/index/index",
     "pages/functions/bills/bill_list/index",
     "pages/logs/logs",
     "pages/functions/boss/index",
-    "pages/functions/vip/vip_list/index",
-    "pages/index2/index"
+    "pages/functions/vip/vip_list/index"
     
   ],
   "window": {

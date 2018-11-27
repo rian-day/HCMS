@@ -1,2 +1,73 @@
 <!--pages/index2/index.wxml-->
-<text>pages/index2/index.wxml</text>
+<!--index.wxml--> 
+<view class="container"> 
+
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+</view>
+   
+<i-grid > 
+  <navigator url="/pages/functions/bills/bill_list/index"> 
+    <i-grid-item > 
+        <i-grid-icon> 
+            <i-icon type='group' size='30' /> 
+        </i-grid-icon> 
+        <i-grid-label>店员</i-grid-label> 
+    </i-grid-item> 
+  </navigator> 
+ 
+  <navigator url="/pages/functions/bills/bill_list/index"> 
+    <i-grid-item> 
+        <i-grid-icon> 
+            <i-icon type='activity' size='30'/> 
+        </i-grid-icon> 
+        <i-grid-label>服务项目</i-grid-label> 
+    </i-grid-item> 
+  </navigator> 
+ 
+  <navigator url="/pages/functions/bills/bill_list/index"> 
+    <i-grid-item> 
+        <i-grid-icon> 
+            <i-icon type="barrage" size='30'/> 
+        </i-grid-icon> 
+        <i-grid-label>店铺信息</i-grid-label> 
+    </i-grid-item> 
+  </navigator> 
+   
+</i-grid> 
+ 
+<i-grid> 
+  <navigator url="/pages/functions/bills/bill_list/index"> 
+    <i-grid-item> 
+        <i-grid-icon> 
+            <i-icon type='label' size='30' /> 
+        </i-grid-icon> 
+        <i-grid-label>折扣优惠</i-grid-label> 
+    </i-grid-item> 
+  </navigator> 
+ 
+  <navigator url="/pages/functions/bills/bill_list/index"> 
+    <i-grid-item> 
+        <i-grid-icon> 
+            <i-icon type='createtask' size='30'/> 
+        </i-grid-icon> 
+        <i-grid-label>订单</i-grid-label> 
+    </i-grid-item> 
+  </navigator> 
+ 
+  <navigator url="/pages/functions/bills/bill_list/index"> 
+    <i-grid-item> 
+        <i-grid-icon> 
+            <i-icon type="dynamic" size='30'/> 
+        </i-grid-icon> 
+        <i-grid-label>营业额</i-grid-label> 
+    </i-grid-item> 
+  </navigator> 
+   
+</i-grid> 
