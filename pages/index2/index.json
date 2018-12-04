@@ -1,1 +1,8 @@
-{}
+{
+  "usingComponents": {
+    "i-grid": "/framework/iview/grid/index",
+    "i-grid-item": "/framework/iview/grid-item/index",
+    "i-grid-icon": "/framework/iview/grid-icon/index",
+    "i-grid-label": "/framework/iview/grid-label/index"
+  }
+}

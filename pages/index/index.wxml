@@ -7,9 +7,6 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
 
   </view>
   <i-grid>
@@ -28,6 +25,16 @@
             <i-icon type="mine_fill" size='30' />
         </i-grid-icon>
         <i-grid-label>vip管理</i-grid-label>
+    </i-grid-item>
+  </navigator>
+  
+
+  <navigator url="/pages/functions/order/add_order/index">
+    <i-grid-item>
+        <i-grid-icon>
+            <i-icon type="mine_fill" size='30' />
+        </i-grid-icon>
+        <i-grid-label>添加订单</i-grid-label>
     </i-grid-item>
   </navigator>
 </i-grid>

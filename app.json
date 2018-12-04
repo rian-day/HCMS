@@ -1,7 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/manage/turnover/index"
+    "pages/common/login/index",
+    "pages/manage/turnover/index",
+    "pages/functions/vip/vip_members/index",
+    "pages/functions/order/add_order/index",
+    "pages/functions/order/choose_vip/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -18,10 +22,6 @@
     "i-card": "./framework/iview/card/index",
     "i-sticky": "./framework/iview/sticky/index",
     "i-sticky-item": "./framework/iview/sticky-item/index",
-    "i-input": "./framework/iview/input/index",
-    "i-grid": "./framework/iview/grid/index",
-    "i-grid-item": "./framework/iview/grid-item/index",
-    "i-grid-icon": "./framework/iview/grid-icon/index",
-    "i-grid-label": "./framework/iview/grid-label/index"
+    "i-input": "./framework/iview/input/index"
   }
 }

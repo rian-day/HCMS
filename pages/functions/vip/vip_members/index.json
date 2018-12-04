@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-index": "/framework/iview/index/index",
+    "i-index-item": "/framework/iview/index-item/index"
+  }
+}

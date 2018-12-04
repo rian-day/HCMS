@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    currentTab:'vipList'
+    currentTab:'memberList'
   },
   changeTab: function ({ detail }){
     this.setData({

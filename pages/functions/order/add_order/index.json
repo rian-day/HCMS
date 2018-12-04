@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-modal": "/framework/iview/modal/index",
+    "i-divider": "/framework/iview/divider/index"
+  }
+}

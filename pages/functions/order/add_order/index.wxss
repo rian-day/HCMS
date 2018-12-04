@@ -1,0 +1,4 @@
+/* pages/functions/order/add_order/index.wxss */
+.searchResultArea{
+  height: 200rpx
+}

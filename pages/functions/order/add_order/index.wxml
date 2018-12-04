@@ -1,0 +1,21 @@
+
+<i-panel title="用户信息">
+  <i-button bind:click="chooseVip" type="success" shape="square" size="large">选择已有VIP</i-button>
+  <i-input value="{{ value6 }}" type="text" mode="wrapped" placeholder="用户名" />
+  <i-input value="{{ value7 }}" type="text" mode="wrapped" placeholder="手机号" />
+  <i-input value="{{ value7 }}" type="text" mode="wrapped" placeholder="会员等级" />
+</i-panel>
+<i-panel title="选择服务">
+  <i-button bind:click="handleClick" type="success" shape="square" size="large">添加服务</i-button>
+</i-panel>
+<i-panel title="所需金额">
+  <view>$ 165</view>
+</i-panel>
+<!-- <i-panel title="选择技师">
+  <i-button bind:click="handleClick" type="success" shape="square" size="large">添加技师</i-button>
+</i-panel>
+<i-panel title="选择房间">
+  <i-button bind:click="handleClick" type="success" shape="square" size="large"></i-button>
+</i-panel> -->
+<i-button bind:click="completeOrder" type="success" shape="square" size="large">完成</i-button>
+<i-button bind:click="cancel" type="error " shape="square" size="large">取消</i-button>

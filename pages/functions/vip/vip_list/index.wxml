@@ -5,26 +5,10 @@
     <i-tab key="tab3" title="选项3" dot></i-tab>
 </i-tabs>
 <view wx:if="{{currentTab == 'memberList'}}">
-  <i-panel title="黑铁">
-      <i-cell-group>
-        <i-cell is-link><i-avatar size='small'>梁</i-avatar></i-cell>
-        <i-cell is-link url="/pages/dashboard/index"><i-avatar>赵</i-avatar></i-cell>
-    </i-cell-group>
-  </i-panel>
-
-  <i-panel title="白金">
-      <i-cell-group>
-        <i-cell is-link><i-avatar size='small'>梁</i-avatar></i-cell>
-        <i-cell is-link url="/pages/dashboard/index"><i-avatar>赵</i-avatar></i-cell>
-    </i-cell-group>
-  </i-panel>
-
-  <i-panel title="钻石">
-      <i-cell-group>
-        <i-cell is-link><i-avatar size='small'>梁</i-avatar></i-cell>
-        <i-cell is-link url="/pages/dashboard/index"><i-avatar>赵</i-avatar></i-cell>
-    </i-cell-group>
-  </i-panel>
+  <i-cell-group>
+    <i-cell title="黑铁" is-link></i-cell>
+    <i-cell title="白金" value="20" is-link url="/pages/functions/vip/vip_members/index"></i-cell>
+  </i-cell-group>
 </view>
 <view wx:if="{{currentTab == 'vipList'}}">
    <i-swipeout  i-class="i-swipeout-demo-item" operateWidth="{{50}}">

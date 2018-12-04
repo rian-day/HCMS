@@ -1,0 +1,8 @@
+
+<input style="text-align:center;margin:10px 5px;height:100rpx;line-height:100rpx;" type="text" auto-focus  placeholder="搜索用户"/>
+<i-divider content="搜索数据"></i-divider>
+
+<i-cell-group>
+  <i-cell title="两名僧" label="18812452145" value="超级会员" bind:click="setVipInfo(this)"></i-cell>
+  <i-cell title="两名僧" label="18812452145" value="超级会员"></i-cell>
+</i-cell-group>
