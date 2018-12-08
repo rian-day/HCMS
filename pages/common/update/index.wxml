@@ -1,0 +1,9 @@
+<!--pages/common/update/index.wxml-->
+<view>
+  <i-cell-group>
+    <i-cell title="修改个人信息" is-link  url="/pages/common/update/update_inf/index"></i-cell>
+    <i-cell title="修改密码" is-link  url="/pages/common/update/update_password/index"></i-cell>
+  </i-cell-group>
+  <text>\n</text>
+  <i-button bind:click="handleClick" type="error">退出登录</i-button>
+</view>

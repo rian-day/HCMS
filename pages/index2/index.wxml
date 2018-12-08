@@ -1,6 +1,6 @@
 <!--pages/index2/index.wxml-->
 <!--index.wxml--> 
-<view class="container"> 
+<view class="container jianbian"> 
 
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
@@ -13,7 +13,7 @@
 </view>
    
 <i-grid > 
-  <navigator url="/pages/functions/bills/bill_list/index"> 
+  <navigator url="/pages/manage/clerk/index"> 
     <i-grid-item > 
         <i-grid-icon> 
             <i-icon type='group' size='30' /> 
@@ -31,7 +31,7 @@
     </i-grid-item> 
   </navigator> 
  
-  <navigator url="/pages/functions/bills/bill_list/index"> 
+  <navigator url="/pages/manage/club/club_inf/index"> 
     <i-grid-item> 
         <i-grid-icon> 
             <i-icon type="barrage" size='30'/> 

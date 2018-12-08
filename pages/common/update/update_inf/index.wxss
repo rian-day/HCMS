@@ -1,0 +1,5 @@
+/* pages/common/update/update_inf/index.wxss */
+
+page{
+  background-color: #EEE;
+}

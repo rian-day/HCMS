@@ -1,13 +1,14 @@
 <!--pages/common/register/index.wxml-->
-<view class="container login" >
+<view >
   <i-panel title="">
-    <i-input value="{{ value4 }}" title="手机号" autofocus placeholder="请输入手机号" />
-    <i-input value="{{ value1 }}" title="账号"  placeholder="请输入的账号" />
-    <i-input value="{{ value2 }}" title="密码" placeholder="请输入密码" />
     
+    <i-input value="{{ value1 }}" bind:change='useridInput' title="姓名" autofocus placeholder="请输入姓名" />
+    <i-input value="{{ value2 }}" bind:change='passwordInput' title="密码" placeholder="请输入密码" />
+    
+    <i-input value="{{ value4 }}" bind:change='telephoneInput' title="手机号" placeholder="请输入手机号" />
     <view class='yz'>
-        <i-input value="{{ value5 }}" placeholder="请输入验证码" />
-        <i-button bind:click="handleClick" style=''>获取验证码</i-button>
+        <i-input value="{{ value5 }}" title="验证码" bind:change='checkcodeInput' placeholder="请输入验证码" />
+        <i-button bind:click="checkcodeClick" style=''>获取验证码</i-button>
     </view>
    
     <i-button bind:click="handleClick" type="primary" shape="circle" size="large">注册</i-button>

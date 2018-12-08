@@ -7,16 +7,42 @@ Page({
   data: {
     userid : "",
     password : "",
-    phone : ""
+    telephone : "",
+    checkcode : "" 
+  },
+
+  useridInput: function (e) {
+    this.setData({
+      userid: e.detail.detail.value
+    })
+  },
+  passwordInput: function (e) {
+    this.setData({
+      password: e.detail.detail.value
+    });
+  },
+  telephoneInput: function (e) {
+    this.setData({
+      telephone: e.detail.detail.value
+    })
+  },
+  checkcodeInput: function (e) {
+    this.setData({
+      checkcode: e.detail.detail.value
+    })
   },
 
   handleClick: function () {
-    console.log("账号：" + this.data.userid + " | 密码：" + this.data.password + " | 手机号：" + this.data.phone);
+    console.log("账号：" + this.data.userid + " | 密码：" + this.data.password + " | 手机号：" + this.data.telephone + " | 验证码：" + this.data.checkcode);
     wx.request({
       url: 'http://115.159.181.30:8181/user/addNewHost', //仅为示例，并非真实的接口地址
       data: {
-        userid: this.data.userid,
-        password: this.data.password
+        username: this.data.userid,
+        password: this.data.password,
+        telephone: this.deta.telephone,
+        checkcode: this.data.checkcode,
+        sex : 'man',
+        age : '20'
       },
       method: 'POST',
       header: {

@@ -1,1 +1,15 @@
 /* pages/manage/club/club_inf/index.wxss */
+page{
+  background-color: #EEE;
+}
+
+
+.pick{
+  margin-left: 15px;
+  display: flex;
+  align-items: center; 
+  width: 100%;
+  height: 60px;
+  font-size:14px;
+  color: #495060;
+}

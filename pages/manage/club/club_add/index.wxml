@@ -1,0 +1,20 @@
+<view class="login" >
+  <i-panel title="">
+
+    <i-input value="{{ value4 }}" title="店铺名" autofocus placeholder="请输入店铺名" />
+
+    <view class="pick">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          地址 ：{{region[0]}} | {{region[1]}} | {{region[2]}}
+        </view>
+      </picker>
+    </view>
+
+    <i-input value="{{ value5 }}" title="详细地址"  placeholder="请输入详细地址" />
+    <i-input value="{{ value6 }}" title="店铺电话"  placeholder="请输入店铺电话" />
+   
+    <i-button bind:click="handleClick" type="primary" shape="circle" size="large">店铺申请</i-button>
+  </i-panel>
+</view>
+

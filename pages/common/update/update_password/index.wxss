@@ -1,0 +1,5 @@
+/* pages/common/update/update_password/index.wxss */
+
+page{
+  background-color: #EEE;
+}

@@ -1,0 +1,22 @@
+<!--pages/common/update/update_inf/index.wxml-->
+
+<view>
+  <i-cell-group>
+    <i-input value="{{ value1 }}" title="姓名"/>
+  </i-cell-group>
+
+  <i-cell-group>
+    <i-input value="{{ value2 }}" title="年龄"/>
+  </i-cell-group>
+
+  <i-cell-group>
+    <i-input value="{{ value3 }}" title="性别"/>
+  </i-cell-group>
+
+  
+
+  <text>\n</text>
+ <i-button bind:click="handleClick" type="primary" shape="circle" size="large">修改信息</i-button>
+
+
+</view>
