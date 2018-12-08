@@ -1,2 +1,28 @@
 <!--pages/manage/clerk/index.wxml-->
-<text>pages/manage/clerk/index.wxml</text>
+<view>
+  <i-button bind:click="handleOpen1" type="success">添加店员</i-button>
+  <text>\n</text>
+  <i-panel>
+      <i-card class="bill-single" title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+        <view slot="content">内容不错</view>
+        <view slot="footer">尾部内容</view>
+      </i-card>
+      <text>\n</text>
+      <i-card class="bill-single" title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+        <view slot="content">内容不错</view>
+        <view slot="footer">尾部内容</view>
+      </i-card>
+  </i-panel>
+</view>
+
+  
+
+
+<i-modal title="添加店员" visible="{{ visible1  }}" bind:ok="handleClose1" bind:cancel="handleClose1">
+      <view >
+        <i-panel>          
+          <i-input value="{{ value1 }}" bind:change='useridInput' title="姓名" autofocus placeholder="请输入姓名" />
+          <i-input value="{{ value2 }}" bind:change='passwordInput' title="密码" placeholder="请输入密码" />      
+        </i-panel>
+      </view>
+</i-modal>

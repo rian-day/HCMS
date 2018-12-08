@@ -1,10 +1,12 @@
 <!--pages/common/login/index.wxml-->
+<i-cell title="注册" is-link  url="/pages/common/register/index"></i-cell>
+<text>\n</text>
+<view class=" " >
 
-<view class="container " >
 
-  <i-panel title="HCMS">
+  <i-panel title="">
 
-    <i-input  type="text" title="账号" bind:change='useridInput'  autofocus placeholder="请输入的账号" />
+    <i-input  type="text" title="账号" bind:change='useridInput'  autofocus placeholder="请输入手机号" />
     
     <i-input  type="text" title="密码" bind:change='passwordInput' placeholder="请输入密码" />
 

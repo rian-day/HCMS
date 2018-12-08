@@ -5,7 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    visible1: false
+  },
+  handleOpen1() {
+    this.setData({
+      visible1: true
+    });
+  },
+  handleClose1() {
+    this.setData({
+      visible1: false
+    });
   },
 
   /**

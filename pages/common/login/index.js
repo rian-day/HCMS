@@ -20,13 +20,14 @@ Page({
         password : e.detail.detail.value
      });
   },
+  
 
   handleClick: function () {
     console.log("账号：" + this.data.userid+" | 密码："+this.data.password);
     wx.request({
       url: 'http://115.159.181.30:8181/user/login', //仅为示例，并非真实的接口地址
       data: {
-        userid: this.data.userid,
+        account: this.data.userid,
         password: this.data.password
       },
       method: 'POST', 
@@ -36,7 +37,7 @@ Page({
       success(res) {
         console.log(res.data)
 
-        if(userType == 1){sdafasf
+        if(userType == 1){
           wx.navigateTo({
             url: '../../index/index1/index'
           })

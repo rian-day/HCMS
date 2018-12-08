@@ -1,0 +1,13 @@
+<!--pages/common/update/update_password/index.wxml-->
+<view>  
+  <i-cell-group>
+    <i-input value="{{ value1 }}" title="旧密码"/>
+  </i-cell-group>
+  <i-cell-group>
+    <i-input value="{{ value2 }}" title="新密码"/>
+  </i-cell-group>
+  
+  <text>\n</text>
+  <i-button bind:click="handleClick" type="primary" shape="circle" size="large">修改密码</i-button>
+</view>
+

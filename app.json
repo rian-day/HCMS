@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/index2/index",
     "pages/index/index",
     "pages/common/login/index",
     "pages/manage/turnover/index",
