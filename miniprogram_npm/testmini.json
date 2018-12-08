@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "taro":"taro-ui/index"
+  }
+}

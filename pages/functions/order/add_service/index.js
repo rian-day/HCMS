@@ -1,4 +1,4 @@
-// pages/functions/order/choose_vip/index.js
+// pages/functions/order/add_service/index.js
 Page({
 
   /**
@@ -7,11 +7,19 @@ Page({
   data: {
 
   },
-  setVipInfo: function(el){
-    console.log(el)
+
+
+  addService: function (el){
+    let lastData = wx.getStorageSync('currentService')
+    if(!lastData){
+      lastData = new Array()
+    }
+    
+    lastData.push(el.detail)
+    console.log(lastData)
     wx.setStorage({
-      key: 'currentVip',
-      data: el.detail,
+      key: 'currentService',
+      data: lastData,
       success: function (res) {
         console.log('异步保存成功')
         wx.navigateBack({
@@ -20,7 +28,6 @@ Page({
       }
     })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */

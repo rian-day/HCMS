@@ -1,0 +1,7 @@
+  <i-cell-group>
+    <view wx:for="{{listDatas}}" wx:key="id">
+
+      <i-cell bindtap="returnData" data-index="{{index}}" title="{{item.title}}" label="{{item.remark}}" value="{{item.value}}"></i-cell>
+
+    </view>
+ </i-cell-group>

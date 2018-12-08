@@ -1,4 +1,4 @@
-// pages/functions/order/choose_vip/index.js
+// pages/functions/order/order_list/index.js
 Page({
 
   /**
@@ -6,19 +6,6 @@ Page({
    */
   data: {
 
-  },
-  setVipInfo: function(el){
-    console.log(el)
-    wx.setStorage({
-      key: 'currentVip',
-      data: el.detail,
-      success: function (res) {
-        console.log('异步保存成功')
-        wx.navigateBack({
-          delta: 1
-        })
-      }
-    })
   },
 
   /**

@@ -1,0 +1,12 @@
+
+.label{
+  padding: 10px
+  
+}
+
+.bill-single{
+  margin: 0 20px;
+}
+.sumText{
+  text-align: right;
+}

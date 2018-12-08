@@ -1,0 +1,5 @@
+
+<input style="text-align:center;margin:10px 5px;height:100rpx;line-height:100rpx;" type="text" auto-focus  placeholder="搜索服务"/>
+<i-divider content="搜索数据"></i-divider>
+
+<my-list bindreturnChooseData="addService"/>

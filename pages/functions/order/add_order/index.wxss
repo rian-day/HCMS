@@ -2,3 +2,20 @@
 .searchResultArea{
   height: 200rpx
 }
+.needMargin{
+  margin: 5rpx;
+}
+.totalAmountBox{
+  
+  padding: 20rpx;
+  margin: 10rpx
+}
+.totalAmount{
+  float: right;
+  color: red;
+  
+}
+.spin{
+  position:fixed !important;
+
+}

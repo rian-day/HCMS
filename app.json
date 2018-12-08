@@ -5,7 +5,11 @@
     "pages/manage/turnover/index",
     "pages/functions/vip/vip_members/index",
     "pages/functions/order/add_order/index",
-    "pages/functions/order/choose_vip/index"
+    "pages/functions/order/choose_vip/index",
+    "pages/functions/order/add_service/index",
+    "components/ListItem/index",
+    "miniprogram_npm/testmini",
+    "pages/functions/order/order_list/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,6 +26,7 @@
     "i-card": "./framework/iview/card/index",
     "i-sticky": "./framework/iview/sticky/index",
     "i-sticky-item": "./framework/iview/sticky-item/index",
-    "i-input": "./framework/iview/input/index"
+    "i-input": "./framework/iview/input/index",
+    "i-spin": "./framework/iview/spin/index"
   }
 }

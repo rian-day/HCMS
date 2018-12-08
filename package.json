@@ -1,0 +1,22 @@
+{
+  "name": "hcms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rian-day/HCMS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rian-day/HCMS/issues"
+  },
+  "homepage": "https://github.com/rian-day/HCMS#readme",
+  "dependencies": {
+    "taro-ui": "^1.5.1"
+  }
+}

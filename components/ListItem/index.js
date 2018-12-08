@@ -1,24 +1,42 @@
-// pages/functions/order/choose_vip/index.js
+// components/ListItem/index.js
 Page({
+
+  properties: {
+    remarks: ['123','41','515'],
+    value:['超级会员','哦哦','412'],
+    reData:[1,2,3]
+  },
 
   /**
    * 页面的初始数据
    */
   data: {
-
-  },
-  setVipInfo: function(el){
-    console.log(el)
-    wx.setStorage({
-      key: 'currentVip',
-      data: el.detail,
-      success: function (res) {
-        console.log('异步保存成功')
-        wx.navigateBack({
-          delta: 1
-        })
+    listDatas: [
+      {
+        id:1,
+        title:'123',
+        remark:'123',
+        value:'超级hi元',
+        reData:1
+      }, {
+        id:2,
+        title: '1233',
+        remark: '1243',
+        value: '超级hi元',
+        reData: 1
+      }, {
+        id:3,
+        title: '1234213',
+        remark: '123',
+        value: '超级hi元',
+        reData: 1
       }
-    })
+    ]
+  },
+  returnData: function (el) {
+    const redata = this.data.listDatas[el.target.dataset.index]
+    const eventOption={}
+    this.triggerEvent('returnChooseData', redata, eventOption)
   },
 
   /**
