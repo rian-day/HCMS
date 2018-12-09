@@ -1,1 +1,10 @@
-{}
+{
+  "usingComponents": {
+    "i-action-sheet": "/framework/iview/action-sheet/index",
+    "i-swipeout": "/framework/iview/swipeout/index",
+    "i-tabs": "/framework/iview/tabs/index",
+    "i-tab": "/framework/iview/tab/index",
+    "i-avatar": "/framework/iview/avatar/index",
+    "i-badge": "/framework/iview/badge/index"
+  }
+}

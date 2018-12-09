@@ -1,12 +1,27 @@
 <!--pages/functions/bills/bill_list/index.wxml-->
-<i-panel title="当前订单">
-    <i-card class="bill-single" title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-      <view slot="content">内容不错</view>
-      <view slot="footer">尾部内容</view>
-    </i-card>
-    <i-card class="bill-single" title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-      <view slot="content">内容不错</view>
-      <view slot="footer">尾部内容</view>
-    </i-card>
-</i-panel>
+<i-tabs current="{{ currentTab }}" bindchange="changeTab">
+    <i-tab key="doingOrder" title="执行中订单">1</i-tab>
+    <i-tab key="completeOrder" title="已完成订单">2</i-tab>
+</i-tabs>
+<view wx:if="{{currentTab == 'doingOrder'}}">
+  <i-card class="bill-single" title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+    <view slot="content">内容不错</view>
+    <view slot="footer">尾部内容</view>
+  </i-card>
+  <i-card class="bill-single" title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+    <view slot="content">内容不错</view>
+    <view slot="footer">尾部内容</view>
+  </i-card>
+</view>
+
+<view wx:if="{{currentTab == 'completeOrder'}}">
+  <i-card class="bill-single" title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+    <view slot="content">内容不错</view>
+    <view slot="footer">尾部内容</view>
+  </i-card>
+  <i-card class="bill-single" title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+    <view slot="content">内容不错</view>
+    <view slot="footer">尾部内容</view>
+  </i-card>
+</view>
   
