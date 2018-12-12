@@ -1,4 +1,6 @@
 // pages/functions/vip/vip_members/index.js
+
+const app = getApp()
 Page({
 
   /**
@@ -19,7 +21,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options.vipGroupId)
+    const req = {
+      url: '/vip/getVipListByUid',
+      method: 'GET',
+      param: {
+        sUid: 5
+      },
+      back: (res) => {
+        console.log(res)
+      }
+    }
+    app.myRequest.sendRequest(req)
   },
 
   /**

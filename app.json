@@ -8,7 +8,6 @@
     "pages/functions/order/add_order/index",
     "pages/functions/order/choose_vip/index",
     "pages/functions/order/add_service/index",
-    "components/ListItem/index",
     "miniprogram_npm/testmini",
     "pages/functions/order/order_list/index"
   ],

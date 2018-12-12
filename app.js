@@ -1,7 +1,10 @@
 //app.js
 App({
+  myRequest: require('/components/common/myRequest.js'),
   onLaunch: function () {
     // 展示本地存储能力
+    wx.setStorageSync('userid', 4)
+
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)

@@ -1,5 +1,6 @@
+<!--components/ListItemComponent/index.wxml-->
   <i-cell-group>
-    <view wx:for="{{listDatas}}" wx:key="id">
+    <view wx:for="{{inDatas}}" wx:key="id">
 
       <i-cell bindtap="returnData" data-index="{{index}}" title="{{item.title}}" label="{{item.remark}}" value="{{item.value}}"></i-cell>
 

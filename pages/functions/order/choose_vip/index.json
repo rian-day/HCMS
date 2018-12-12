@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "my-list":"/components/ListItem/index",
+    "my-list":"/components/ListItemComponent/index",
     "i-divider": "/framework/iview/divider/index"
   }
 }

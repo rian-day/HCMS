@@ -48,6 +48,7 @@ Page({
 
     let customer = wx.getStorageSync('currentVip')
     let curservice = wx.getStorageSync('currentService')
+    console.log(customer)
     if (customer){
       const customerInfo = {
         name: customer.title,

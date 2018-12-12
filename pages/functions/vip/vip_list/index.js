@@ -1,11 +1,14 @@
 // pages/functions/vip/vip_list/index.js
+
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    currentTab:'memberList'
+    currentTab:'memberList',
+    vipGrouplist:[]
   },
   changeTab: function ({ detail }){
     this.setData({
@@ -18,6 +21,20 @@ Page({
    */
   onLoad: function (options) {
 
+
+    const req = {
+      url: '/vip/getVipTypeAndNumList',
+      method: 'POST',
+      param: {
+      },
+      back: (res) => {
+        console.log(res)
+        this.setData({
+          vipGrouplist : res
+        })
+      }
+    }
+    app.myRequest.sendRequest(req)
   },
 
   /**

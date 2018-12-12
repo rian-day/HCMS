@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-divider": "/framework/iview/divider/index",
+    "i-avatar": "/framework/iview/avatar/index"
+  }
+}

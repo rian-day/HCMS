@@ -6,8 +6,9 @@
 </i-tabs>
 <view wx:if="{{currentTab == 'memberList'}}">
   <i-cell-group>
-    <i-cell title="黑铁" is-link></i-cell>
-    <i-cell title="白金" value="20" is-link url="/pages/functions/vip/vip_members/index"></i-cell>
+     <view wx:for="{{vipGrouplist}}" wx:key="id">
+      <i-cell title="{{item.name}}" value="{{item.num}}" is-link url="/pages/functions/vip/vip_members/index?vipGroupId={{item.id}}"></i-cell>
+     </view>
   </i-cell-group>
 </view>
 <view wx:if="{{currentTab == 'vipList'}}">

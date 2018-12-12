@@ -1,22 +1,61 @@
 // pages/functions/order/order_list/index.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    currentTab:'doingOrder'
+    currentTab:'doingOrder',
+    orderList:[],
+    ids:''
   },
   changeTab({ detail }){
     this.setData({
       currentTab: detail.key
     });
   },
+  completeOrder(){
+    wx.showModal({
+      title: '提示',
+      content: '是否完成该订单',
+      success(res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+  cancelOrder(){
+    wx.showModal({
+      title:'提示',
+      content:'是否确定取消该订单',
+      success(res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const req = {
+      url : '/bill/getBillListToday',
+      method: 'GET',
+      param:{
+        
+      },
+      back: (res)=>{
+        this.setData({ 'orderList':res.list},{'ids':res.ids})
+      }
+    }
+    app.myRequest.sendRequest(req)
   },
 
   /**

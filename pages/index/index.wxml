@@ -10,14 +10,6 @@
 
   </view>
   <i-grid>
-  <navigator url="/pages/functions/bills/bill_list/index">
-     <i-grid-item>
-        <i-grid-icon>
-            <i-icon type='activity' size='30' />
-        </i-grid-icon>
-        <i-grid-label>账单页面</i-grid-label>
-    </i-grid-item>
-  </navigator>
 
   <navigator url="/pages/functions/vip/vip_list/index">
     <i-grid-item>
@@ -36,12 +28,8 @@
         <i-grid-label>查看订单</i-grid-label>
     </i-grid-item>
   </navigator>
-  
 
-</i-grid>
-
-<i-grid>
-  <navigator url="/pages/functions/order/add_order/index">
+   <navigator url="/pages/functions/order/add_order/index">
     <i-grid-item>
         <i-grid-icon>
             <i-icon type="mine_fill" size='30' />
@@ -50,9 +38,5 @@
     </i-grid-item>
   </navigator>
   
-    <i-grid-item>
-    </i-grid-item>
-    
-    <i-grid-item>
-    </i-grid-item>
+
 </i-grid>

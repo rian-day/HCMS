@@ -1,11 +1,46 @@
 // pages/functions/order/choose_vip/index.js
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    searchContent:'',
+    vipList:[
+      // {
+      //   id: 2,
+      //   title: '1233',
+      //   remark: '1243',
+      //   value: '超级hi元',
+      //   reData: 1
+      // }, {
+      //   id: 3,
+      //   title: '1234213',
+      //   remark: '123',
+      //   value: '超级hi元',
+      //   reData: 1
+      // }
+    ]
+  },
+  searchVip: function(event){
+    console.log(event.detail)
+    const req = {
+      url : '/vip/getVipByTelephoneOrUsername',
+      method:'POST',
+      param: { temp: event.detail.value},
+      back:(res)=>{
+        console.log(res)
+        for(let r of res){
+          r.title = r.username
+          r.value = r.telephone
+          r.remark = r.sex?'男':'女'
+        }
+        this.setData({'vipList':res})
+      }
+    }
+    app.myRequest.sendRequest(req)
   },
   setVipInfo: function(el){
     console.log(el)
