@@ -12,7 +12,7 @@ const BASEURL = 'http://115.159.181.30:8181/'
 
 //   }
 // }
-function sendRequest({url,method,param,back}) {
+function sendRequest({url,method='POST',param={},back}) {
   if (url[0] == '/') url = url.substring(1,url.length)
   param.sUid = wx.getStorageSync('userid')
   wx.showLoading({

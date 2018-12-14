@@ -1,14 +1,33 @@
 // pages/functions/order/add_service/index.js
+
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    serviceList : []
   },
 
-
+  searchService: function(event) {
+    console.log(event.detail)
+    const req = {
+      url: '/commodity/getCommodityList',
+      method: 'GET',
+      param: { temp: event.detail.value },
+      back: (res) => {
+        console.log(res)
+        for (let r of res) {
+          r.title = r.cName
+          r.value = r.price
+          r.remark = r.remarks
+        }
+        this.setData({ 'serviceList': res })
+      }
+    }
+    app.myRequest.sendRequest(req)
+  },
   addService: function (el){
     let lastData = wx.getStorageSync('currentService')
     if(!lastData){
@@ -16,7 +35,6 @@ Page({
     }
     
     lastData.push(el.detail)
-    console.log(lastData)
     wx.setStorage({
       key: 'currentService',
       data: lastData,
@@ -32,8 +50,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-  },
+      const req = {
+        url: '/commodity/getCommodityList',
+        method: 'GET',
+        param:{},
+        back:(res)=>{
+          console.log(res)
+          for(let r of res){
+            r.title = r.cName
+            r.value = r.price
+            r.remark = r.remarks
+          }
+          this.setData({'serviceList':res})
+        }
+      }
+      app.myRequest.sendRequest(req)
+  },  
 
   /**
    * 生命周期函数--监听页面初次渲染完成

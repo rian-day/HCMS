@@ -1,0 +1,29 @@
+<!--pages/functions/vip/add_vip/index.wxml-->
+<i-panel title="基本信息">
+
+  <i-input value="{{vipInfo.name}}" title="姓名" placeholder="姓名" />
+ 
+  <i-input value="{{vipInfo.age}}" title="年龄" placeholder="年龄" />
+  <i-input value="{{vipInfo.tel}}" title="手机号" placeholder="手机号" />
+</i-panel>
+<i-panel title="性别">
+  <i-radio-group current="{{vipInfo.sex}}" bindchange="changeSex">
+
+    <i-radio value="男" position="right">
+  
+    </i-radio>
+    <i-radio value="女" position="right">
+  
+    </i-radio>
+  </i-radio-group>
+</i-panel>
+<i-panel title="其他">
+  <picker bindchange="selectVipGroup" value="{{vipIndex}}" range="{{vipGroup}}" range-key="name">
+    <i-input value="{{vipGroup[vipIndex].name}} " title="Vip等级" disabled/>
+  </picker>
+
+  
+  <i-input value="{{vipInfo.amount}}" title="金额" placeholder="金额" />
+</i-panel>
+<i-button bind:click="addVip" type="primary">添加</i-button>
+<i-button bind:click="cancel" type="warning">取消</i-button>

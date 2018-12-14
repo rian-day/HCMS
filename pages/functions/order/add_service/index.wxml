@@ -6,4 +6,5 @@ bindinput = "searchService"
 />
 <i-divider content="搜索数据"></i-divider>
 
-<my-list bindreturnChooseData="addService"/>
+<my-list inDatas="{{serviceList}}"
+ bindreturnChooseData="addService"/>

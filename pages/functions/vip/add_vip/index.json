@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-radio-group": "/framework/iview/radio-group/index",
+    "i-radio": "/framework/iview/radio/index"
+  }
+}

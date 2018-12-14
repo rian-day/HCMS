@@ -5,6 +5,14 @@ App({
     // 展示本地存储能力
     wx.setStorageSync('userid', 4)
 
+    //云开发
+    wx.cloud.init({
+      env: 'hcms-c57199',
+      traceUser:true
+    })
+    const db = wx.cloud.database()
+    
+
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)

@@ -37,6 +37,14 @@
         <i-grid-label>添加订单</i-grid-label>
     </i-grid-item>
   </navigator>
-  
+
+   <navigator url="/pages/functions/vip/add_vip/index">
+    <i-grid-item>
+        <i-grid-icon>
+            <i-icon type="mine_fill" size='30' />
+        </i-grid-icon>
+        <i-grid-label>添加vip</i-grid-label>
+    </i-grid-item>
+  </navigator>
 
 </i-grid>

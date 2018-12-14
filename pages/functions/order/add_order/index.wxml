@@ -1,13 +1,13 @@
 <view>
 <i-panel title="用户信息">
   <i-button bind:click="chooseVip" type="success" shape="square" size="large">选择已有VIP</i-button>
-  <i-input value="{{ customerInfo.name }}" type="text" mode="wrapped" placeholder="用户名" />
-  <i-input value="{{ customerInfo.tel }}" type="text" mode="wrapped" placeholder="手机号" />
-  <i-input value="{{ customerInfo.level }}" type="text" mode="wrapped" placeholder="会员等级" />
+  <i-input value="{{ customerInfo.username }}" type="text" mode="wrapped" placeholder="用户名" />
+  <i-input value="{{ customerInfo.telephone }}" type="text" mode="wrapped" placeholder="手机号" />
+  <i-input value="{{ customerInfo.vName }}" type="text" mode="wrapped" placeholder="会员等级" />
 </i-panel>
 <i-panel title="选择服务">
   <view wx:for="{{services}}" wx:key="name">
-    <i-card title="{{item.name}}" extra="{{item.coast}}" class="needMargin">
+    <i-card title="{{item.cName}}" extra="{{item.value}}" class="needMargin">
       <view slot="content">{{item.remark}}</view>
    </i-card>
   </view>
@@ -16,7 +16,7 @@
 </i-panel>
   <view class='totalAmountBox'>
   合计：
-  <view class="totalAmount">$ {{}}</view>
+  <view class="totalAmount">$ {{settlement}}</view>
   </view>
 <!-- <i-panel title="选择技师">
   <i-button bind:click="handleClick" type="success" shape="square" size="large">添加技师</i-button>

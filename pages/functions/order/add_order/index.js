@@ -1,4 +1,5 @@
 // pages/functions/order/add_order/index.js
+const app = getApp()
 Page({
 
   /**
@@ -6,7 +7,9 @@ Page({
    */
   data: {
     loading:0,
-    services:[]
+    services:[],
+    customerInfo:{},
+    settlement:0
   },
   chooseVip(){
     wx.navigateTo({
@@ -18,21 +21,45 @@ Page({
       url: '/pages/functions/order/add_service/index'
     })
   },
-  completeOrder(){
-    this.setData({ "loading": 1 })
-  },
-  cancel(){
+  cancel() {
     wx.removeStorageSync('currentVip')
     wx.removeStorageSync('currentService')
     wx.navigateBack({
       delta: 1
     })
   },
+  completeOrder(){
+    const data = this.data
+    let servicesCom = []
+    for(let s of this.data.services){
+      const ser = {
+        id:s.id,
+        num:1,
+        type:s.type
+      }
+      servicesCom.push(ser)
+    }
+    const req = {
+      url: '/bill/addNewBill',
+      method: 'POST',
+      param:{
+        paramsMap: JSON.stringify(servicesCom),
+        uid: data.customerInfo.id,
+        username: data.customerInfo.username,
+        telephone: data.customerInfo.telephone,
+        remarks: ''
+      },
+      back:(res)=>{
+        this.cancel()
+      }
+    }
+    app.myRequest.sendRequest(req)
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.data.customerInfo = {}
   },
 
   /**
@@ -48,28 +75,24 @@ Page({
 
     let customer = wx.getStorageSync('currentVip')
     let curservice = wx.getStorageSync('currentService')
-    console.log(customer)
     if (customer){
       const customerInfo = {
         name: customer.title,
         level: customer.value,
-        tel: customer.remark
+        tel: customer.telephone
       }
-      this.setData({ "customerInfo": customerInfo })
+      this.setData({ "customerInfo": customer })
     }
+    let settlement = 0
     if (curservice){
-      let services = []
       for(let i of curservice){
-        const s = {
-          name: i.title,
-          coast: i.value,
-          remark: i.remark
-        }
-        services.push(s)
+        i.name = i.title
+        i.coast = i.value
+        settlement += parseFloat(i.value)
       }
-      this.setData({ "services": services })
+      this.setData({ "services": curservice })
+      this.setData({ "settlement": settlement })
     }
-    console.log(this.data.services,curservice)
   },
 
   /**

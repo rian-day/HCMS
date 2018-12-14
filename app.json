@@ -1,4 +1,3 @@
-
 {
   "pages": [
     "pages/index/index",
@@ -9,7 +8,8 @@
     "pages/functions/order/choose_vip/index",
     "pages/functions/order/add_service/index",
     "miniprogram_npm/testmini",
-    "pages/functions/order/order_list/index"
+    "pages/functions/order/order_list/index",
+    "pages/functions/vip/add_vip/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,6 +27,8 @@
     "i-sticky": "./framework/iview/sticky/index",
     "i-sticky-item": "./framework/iview/sticky-item/index",
     "i-input": "./framework/iview/input/index",
-    "i-spin": "./framework/iview/spin/index"
+    "i-spin": "./framework/iview/spin/index",
+    "i-row": "./framework/iview/row/index",
+    "i-col": "./framework/iview/col/index"
   }
 }

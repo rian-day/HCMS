@@ -1,0 +1,4 @@
+/* pages/functions/vip/add_vip/index.wxss */
+input{
+  text-align: center;
+}
