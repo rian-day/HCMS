@@ -1,9 +1,10 @@
 //app.js
 App({
   myRequest: require('/components/common/myRequest.js'),
+  telCheck:'/^(((13[0-9]{1})|159|153)+\d{8})$/',
   onLaunch: function () {
     // 展示本地存储能力
-    wx.setStorageSync('userid', 4)
+    wx.setStorageSync('userid', 3)
 
     //云开发
     wx.cloud.init({

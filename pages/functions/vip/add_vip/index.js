@@ -1,5 +1,6 @@
 // pages/functions/vip/add_vip/index.js
-const myRequest = getApp().myRequest
+const app = getApp()
+const myRequest = app.myRequest
 Page({
 
   /**
@@ -7,10 +8,10 @@ Page({
    */
   data: {
     vipInfo:{
-      name: 'hyh',
+      name: '',
       age:18,
       sex:'男',
-      tel:'17866',
+      tel:'177',
       amount: 100.6,
     },
     vipGroup:[
@@ -29,6 +30,7 @@ Page({
       delta: 1
     })
   },
+ 
   addVip(e){
     const data = this.data
     const vipInfo = data.vipInfo
@@ -46,6 +48,43 @@ Page({
       }
     }
     myRequest.sendRequest(req)
+  }, 
+  vaildInfo() {
+    const data = this.data
+    const vipInfo = data.vipInfo
+    if(!vipInfo.name){
+      wx.showToast({
+        title: '请填写用户名字',
+        icon: 'none',
+        mask: true,
+      });
+      return;
+    }
+    if (!vipInfo.age){
+      wx.showToast({
+        title: '请填写用户年龄',
+        icon: 'none',
+        mask: true,
+      });
+      return;
+    }
+    if (!vipInfo.amount){
+      wx.showToast({
+        title: '请填写用户账户初始金额',
+        icon: 'none',
+        mask: true,
+      });
+      return;
+    }
+    if (!(/^1[3|5|7|8][0-9]\d{4,8}$/.test(vipInfo.tel))) {
+      wx.showToast({
+        title: '请填写正确的手机号',
+        icon: 'none',
+        mask: true,
+      });
+      return;
+    }
+    this.addVip()
   },
   changeSex(e){
     let vipInfo = this.data.vipInfo

@@ -31,7 +31,7 @@ function sendRequest({url,method='POST',param={},back}) {
     fail: function (res) {
       wx.showToast({
         title: '请求错误',
-        icon: 'error',
+        icon: 'none',
         mask: true,
       });
       back(false);
@@ -48,11 +48,11 @@ function sendRequest({url,method='POST',param={},back}) {
         return;
       }
       if (res.statusCode == 200) {
-        wx.showToast({
-          title: '请求成功',
-          icon: 'success',
-          mask: true,
-        });
+        // wx.showToast({
+        //   title: '请求成功',
+        //   icon: 'success',
+        //   mask: true,
+        // });
         back(res.data.data);
         return;
       } else if (res.data.length > 0) {
