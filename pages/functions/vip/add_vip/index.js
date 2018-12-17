@@ -8,11 +8,11 @@ Page({
    */
   data: {
     vipInfo:{
-      name: '何',
-      age:18,
-      sex:'男',
-      tel:'17794508470',
-      amount: 200.5,
+      name: '',
+      age:'',
+      sex:'',
+      tel:'',
+      amount: '',
     },
     vipGroup:[
     ],
