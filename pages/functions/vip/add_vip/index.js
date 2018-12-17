@@ -8,20 +8,13 @@ Page({
    */
   data: {
     vipInfo:{
-      name: '',
+      name: '何',
       age:18,
       sex:'男',
-      tel:'177',
-      amount: 100.6,
+      tel:'17794508470',
+      amount: 200.5,
     },
     vipGroup:[
-      {
-        id:1,
-        name:'白金'
-      },{
-        id:2,
-        name:'黄金'
-      }
     ],
     vipIndex:0
   },

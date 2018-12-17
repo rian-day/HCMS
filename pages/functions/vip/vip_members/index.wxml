@@ -1,10 +1,11 @@
 <i-input value="{{ value1 }}" title="搜索" autofocus placeholder="名字" />
 <view class="i-index-demo">
+  <i-cell-group>
     <i-index height="100%" bind:change="onChange">
         <i-index-item 
-            wx:for="{{ cities }}" 
+            wx:for="{{ vipList }}" 
             wx:for-index="index" 
-            wx:key="{{index}}" 
+            wx:key="id" 
             wx:for-item="item" name="{{item.key}}">
             <view 
                 class="i-index-demo-item" 
@@ -12,8 +13,11 @@
                 wx:for-index="in" 
                 wx:key="{{in}}" 
                 wx:for-item="it">
-                {{it.name}}
+                <i-cell value ="{{it.vName}}"is-link url="/pages/dashboard/index">
+                  <i-avatar>{{it.username}}</i-avatar><view>手机号:{{it.telephone}}</view>
+                </i-cell>
             </view>
         </i-index-item>
     </i-index>
+  </i-cell-group>
 </view>

@@ -7,29 +7,45 @@ Page({
    * 页面的初始数据
    */
   data: {
-    cities: [
-      {
-
-      }
-    ]
+    vipList:[]
   },
   onChange(event) {
     console.log(event.detail, 'click right menu callback data')
   },
-
+  searchVip: function (event) {
+    console.log(event.detail)
+    const req = {
+      url: '/vip/getVipByTelephoneOrUsername',
+      method: 'POST',
+      param: { temp: event.detail.value },
+      back: (res) => {
+        console.log(res)
+        for (let r of res) {
+          r.title = r.username
+          r.value = r.telephone
+          r.remark = r.sex ? '男' : '女'
+        }
+        this.setData({ 'vipList': res })
+      }
+    }
+    app.myRequest.sendRequest(req)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     console.log(options.vipGroupId)
     const req = {
-      url: '/vip/getVipListByUid',
-      method: 'GET',
+      url: '/vip/getUserListByVipType',
+      method: 'POST',
       param: {
-        sUid: 5
+        vipId: options.vipGroupId
       },
       back: (res) => {
-        console.log(res)
+        for(let r of res){
+          r.index = app.convertPinyin(r.username).toUpperCase()
+        }
+        this.setVipData(res)
       }
     }
     app.myRequest.sendRequest(req)
@@ -38,36 +54,29 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-    const cities = [
-      {
-        pinyin:'Huangshan',
-        name:'黄山'
-      },{
-        pinyin: 'Honghsan',
-        name: '红山'
-      }
-    ]
-    let storeCity = new Array(26);
+  setVipData(vipList){
+    let store = new Array(26);
     const words = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     words.forEach((item, index) => {
-      storeCity[index] = {
+      store[index] = {
         key: item,
         list: []
       }
     })
-    cities.forEach((item) => {
-      let firstName = item.pinyin.substring(0, 1);
+    vipList.forEach((item) => {
+      let firstName = item.index.substring(0, 1);
       let index = words.indexOf(firstName);
-      storeCity[index].list.push({
-        name: item.name,
-        key: firstName
-      });
+      item.key = firstName
+      item.name = item.username
+      store[index].list.push(item);
     })
-    this.data.cities = storeCity;
     this.setData({
-      cities: this.data.cities
+      'vipList': store
     })
+    console.log(store)
+  },
+  onReady: function () {
+    
   },
 
   /**
