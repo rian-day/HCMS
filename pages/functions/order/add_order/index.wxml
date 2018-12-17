@@ -7,7 +7,7 @@
 </i-panel>
 <i-panel title="选择服务">
   <view wx:for="{{services}}" wx:key="name">
-    <i-card title="{{item.cName}}" extra="{{item.value}}" class="needMargin">
+    <i-card title="{{item.cName}}" extra="${{item.value}}" class="needMargin">
       <view slot="content">{{item.remark}}</view>
    </i-card>
   </view>

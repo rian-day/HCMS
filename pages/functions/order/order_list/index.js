@@ -20,6 +20,7 @@ Page({
   completeOrder(e){
     const index = e.currentTarget.dataset.billindex
     const currentOrder = this.data.doingOrderList[index]
+    const obj = this
     wx.showModal({
       title: '提示',
       content: '是否完成该订单',
@@ -37,14 +38,17 @@ Page({
             }
           }
           myRequest.sendRequest(req)
-          this.loadData()
+          obj.loadData()
         } else if (res.cancel) {
           console.log('用户点击取消')
         }
       }
     })
   },
-  cancelOrder(){
+  cancelOrder(e) {
+    const index = e.currentTarget.dataset.billindex
+    const currentOrder = this.data.doingOrderList[index]
+    const obj = this
     wx.showModal({
       title:'提示',
       content:'是否确定取消该订单',
@@ -61,7 +65,7 @@ Page({
             }
           }
           myRequest.sendRequest(req)
-          this.loadData()
+          obj.loadData()
         } else if (res.cancel) {
           console.log('用户点击取消')
         }

@@ -2,7 +2,6 @@
 <i-tabs current="{{ currentTab }}" bindchange="changeTab">
     <i-tab key="memberList" title="会员列表" count="3"></i-tab>
     <i-tab key="vipList" title="等级列表"></i-tab>
-    <i-tab key="tab3" title="选项3" dot></i-tab>
 </i-tabs>
 <view wx:if="{{currentTab == 'memberList'}}">
   <i-cell-group>

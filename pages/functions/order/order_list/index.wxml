@@ -5,7 +5,7 @@
 </i-tabs>
 <view wx:if="{{currentTab == 'doingOrder'}}">
   <view wx:for="{{doingOrderList}}" wx:key="id">
-    <i-card class="bill-single" title="{{item.name}}" extra="{{item.createTime}}">
+    <i-card class="bill-single" title="收营员:{{item.name}}" extra="{{item.createTime}}">
       <view slot="content">
       消费者:{{item.customerName}}
       <br/>
@@ -14,7 +14,7 @@
       <view slot="footer">
         备注:{{item.remarks}}
         <i-button data-billIndex="{{index}}" bind:click="completeOrder" size="small" type="success">完成订单</i-button>
-        <i-button bind:click="cancelOrder" type="error">取消订单</i-button>
+        <i-button data-billIndex="{{index}}" bind:click="cancelOrder" type="error">取消订单</i-button>
 
       </view>
     </i-card>
@@ -23,7 +23,7 @@
 
 <view wx:if="{{currentTab == 'completeOrder'}}">
   <view wx:for="{{completeOrderList}}" wx:key="id">
-    <i-card class="bill-single" title="{{item.name}}" extra="{{item.createTime}}" >
+    <i-card class="bill-single" title="收营员:{{item.name}}" extra="{{item.createTime}}" >
       <view slot="content">
       消费者:{{item.customerName}}
       <br/>

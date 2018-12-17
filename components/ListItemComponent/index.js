@@ -15,27 +15,6 @@ Component({
    * 组件的初始数据
    */
   data: {
-    listDatas: [
-      {
-        id: 1,
-        title: '123',
-        remark: '123',
-        value: '超级hi元',
-        reData: 1
-      }, {
-        id: 2,
-        title: '1233',
-        remark: '1243',
-        value: '超级hi元',
-        reData: 1
-      }, {
-        id: 3,
-        title: '1234213',
-        remark: '123',
-        value: '超级hi元',
-        reData: 1
-      }
-    ]
   },
 
   /**
